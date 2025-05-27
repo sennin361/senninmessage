@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>仙人メッセージ</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#4caf50" />
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('Service Worker 登録成功'))
+          .catch(() => console.log('Service Worker 登録失敗'));
+      });
+    }
+  </script>
+</head>
+<body>
+  <div id="login">
+    <h2>仙人メッセージに参加</h2>
+    <input type="text" id="nicknameInput" placeholder="ニックネーム" />
+    <input type="text" id="roomInput" placeholder="ルーム名" />
+    <button id="joinBtn">参加</button>
+  </div>
+
+  <div id="chat" style="display:none;">
+    <h3 id="roomTitle"></h3>
+    <div id="messages"></div>
+    <form id="messageForm">
+      <input type="text" id="messageInput" autocomplete="off" placeholder="仙人の言葉を入力" />
+      <input type="file" id="imageInput" accept="image/*" />
+      <button type="submit" id="sendBtn">送信</button>
+    </form>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
