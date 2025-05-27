@@ -32,7 +32,7 @@ joinBtn.addEventListener('click', () => {
       loginDiv.style.display = 'none';
       chatDiv.style.display = 'block';
       roomTitle.textContent = `仙人の集い: ${room}`;
-      messageInput.placeholder = '仙人の言葉を入力してください...';
+      messageInput.placeholder = 'メッセージを入力してください...';
       messageInput.focus();
     } else {
       alert(response.message);
