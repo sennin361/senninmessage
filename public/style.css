@@ -1,0 +1,139 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#login, #chat {
+  margin: auto;
+  width: 100%;
+  max-width: 480px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+#login h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#nicknameInput, #roomInput, #messageInput {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+#imageInput {
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+#joinBtn, #sendBtn {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#joinBtn:hover, #sendBtn:hover {
+  background-color: #45a049;
+}
+
+#chat h3 {
+  margin-top: 0;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+#messages {
+  height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  background: #fff;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+
+.message {
+  margin-bottom: 10px;
+  max-width: 80%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  position: relative;
+  clear: both;
+  word-wrap: break-word;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.message .user {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.message.self {
+  background-color: #d7f0d3;
+  margin-left: auto;
+  text-align: left;
+  border-bottom-right-radius: 2px;
+}
+
+.message.other {
+  background-color: #fff;
+  margin-right: auto;
+  text-align: left;
+  border-bottom-left-radius: 2px;
+  border: 1px solid #ccc;
+}
+
+.message.system {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  max-width: 100%;
+  margin: 10px auto;
+  padding: 6px 0;
+  background: none;
+  border: none;
+}
+
+.message img {
+  max-width: 100%;
+  margin-top: 6px;
+  border-radius: 8px;
+  display: block;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input[type="text"] {
+  margin-bottom: 8px;
+}
+
+form input[type="file"] {
+  margin-bottom: 8px;
+}
+
+form button {
+  font-weight: bold;
+}
